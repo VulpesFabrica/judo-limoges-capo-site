@@ -1,0 +1,22 @@
+.btn-primary {
+    background: var(--color-accent);
+    color: var(--color-primary);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+}

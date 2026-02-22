@@ -1,0 +1,43 @@
+.header {
+    background: var(--color-primary);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: var(--color-accent);
+}
+
+.header-cta {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .nav {
+        display: none;
+    }
+}

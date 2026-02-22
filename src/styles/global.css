@@ -1,0 +1,29 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --color-primary: #161D72;
+    --color-accent: #F5D90A;
+    --color-bg-soft: #F6F7FB;
+    --color-text: #1A1A1A;
+}
+
+/* =========================
+   BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: var(--color-text);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}

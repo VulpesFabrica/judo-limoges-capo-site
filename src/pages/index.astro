@@ -1,11 +1,54 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import MainLayout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="CAPO Judo Limoges – Club de Judo à Limoges">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CAPO Judo Limoges</h1>
+            <p>Club de Judo à Limoges – Discipline, respect et performance.</p>
+            <div class="hero-buttons">
+                <a href="/cours-horaires" class="btn-primary">Voir les horaires</a>
+                <a href="/le-club" class="btn-secondary">Découvrir le club</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container grid-3">
+            <div class="card">
+                <h3>Tous niveaux</h3>
+                <p>Enfants, adolescents et adultes.</p>
+            </div>
+            <div class="card">
+                <h3>Affilié France Judo</h3>
+                <p>Club officiel reconnu par la fédération.</p>
+            </div>
+            <div class="card">
+                <h3>Esprit sportif</h3>
+                <p>Respect, entraide et progression.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Horaires des cours</h2>
+            <p>Découvrez les créneaux adaptés à chaque âge.</p>
+            <a href="/cours-horaires" class="btn-primary">Voir tous les horaires</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Actualités du club</h2>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Rejoignez le CAPO Judo Limoges</h2>
+            <a href="/contact" class="btn-primary">Nous contacter</a>
+        </div>
+    </section>
+</MainLayout>
