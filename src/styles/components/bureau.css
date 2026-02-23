@@ -1,0 +1,37 @@
+.bureau-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.bureau-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.bureau-card h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.bureau-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .bureau-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .bureau-grid {
+        grid-template-columns: 1fr;
+    }
+}

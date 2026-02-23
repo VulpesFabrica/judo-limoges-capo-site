@@ -1,0 +1,9 @@
+---
+const { alt = false } = Astro.props;
+---
+
+<section class={`section ${alt ? "section-alt" : ""}`}>
+    <div class="container">
+        <slot />
+    </div>
+</section>

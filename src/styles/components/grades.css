@@ -1,0 +1,31 @@
+.grades-group {
+    margin-bottom: 2.5rem;
+}
+
+.grades-group h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+}
+
+.grades-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.grades-group li {
+    padding: 0.4rem 0;
+    font-size: 1.05rem;
+}
+
+.badge-memory {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    color: #444;
+    font-style: italic;
+}

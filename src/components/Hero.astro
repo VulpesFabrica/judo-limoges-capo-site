@@ -1,0 +1,10 @@
+---
+const { title, subtitle, small = false } = Astro.props;
+---
+
+<section class={`hero ${small ? "small-hero" : ""}`}>
+    <div class="container">
+        <h1>{title}</h1>
+        {subtitle && <p>{subtitle}</p>}
+    </div>
+</section>

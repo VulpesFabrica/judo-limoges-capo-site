@@ -1,0 +1,38 @@
+.timeline {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    border-left: 4px solid var(--color-primary);
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.timeline-content p {
+    margin: 0.5rem 0;
+}
+
+.timeline-content ul {
+    margin: 0.5rem 0;
+    padding-left: 1.2rem;
+}
+
+.badge-memory {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    color: #444;
+    font-style: italic;
+}

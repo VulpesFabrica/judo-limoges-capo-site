@@ -1,0 +1,34 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Hero from "../../components/Hero.astro";
+import Section from "../../components/Section.astro";
+import Card from "../../components/Card.astro";
+---
+
+<MainLayout title="Le Bureau – CAPO Judo Limoges">
+    <Hero
+        title="Le Bureau du CAPO Judo Limoges"
+        subtitle="L’équipe administrative du club."
+        small={true}
+    />
+    <Section>
+        <div class="bureau-grid">
+            <Card>
+                <h2>Président</h2>
+                <p class="bureau-name">Laurent MOREAU</p>
+            </Card>
+            <Card>
+                <h2>Secrétaire</h2>
+                <p class="bureau-name">Isabelle MINOT</p>
+            </Card>
+            <Card>
+                <h2>Trésorière</h2>
+                <p class="bureau-name">Cécile MEILLAC</p>
+            </Card>
+            <Card>
+                <h2>Membre</h2>
+                <p class="bureau-name">Bernard LAMICHE</p>
+            </Card>
+        </div>
+    </Section>
+</MainLayout>
