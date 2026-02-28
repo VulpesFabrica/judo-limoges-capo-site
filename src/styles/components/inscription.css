@@ -1,0 +1,40 @@
+.doc-list li {
+    margin-bottom: 1rem;
+}
+
+.doc-list a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.doc-list a:hover {
+    color: var(--color-accent);
+}
+
+.tarif-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tarif-table th,
+.tarif-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.tarif-table th {
+    background: var(--color-primary);
+    color: white;
+}
+
+.payment-list li {
+    margin-bottom: 0.8rem;
+}
+
+.payment-required {
+    color: var(--color-danger);
+    font-weight: bold;
+}

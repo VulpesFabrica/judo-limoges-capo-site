@@ -1,54 +1,62 @@
 ---
 import MainLayout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import Button from "../components/Button.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <MainLayout title="CAPO Judo Limoges – Club de Judo à Limoges">
-    <section class="hero">
-        <div class="hero-content">
-            <h1>CAPO Judo Limoges</h1>
-            <p>Club de Judo à Limoges – Discipline, respect et performance.</p>
-            <div class="hero-buttons">
-                <a href="/cours-horaires" class="btn-primary">Voir les horaires</a>
-                <a href="/le-club" class="btn-secondary">Découvrir le club</a>
-            </div>
+    <Hero
+        title="CAPO Judo Limoges"
+    >
+        <p class="hero-address">
+            Situé
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=25+Avenue+Locarno+87100+Limoges"
+                target="_blank"
+                rel="noopener"
+            >
+                25 Avenue Locarno, 87100 Limoges
+            </a>
+        </p>
+        <p>Club Label de Bronze – France Judo</p>
+        <img
+            src="/images/bronze.png"
+            alt="Label Bronze France Judo"
+            class="logo-lg"
+        />
+        <div class="hero-buttons">
+            <Button href="/cours-horaires">Voir les horaires</Button>
+            <Button href="/le-club" variant="secondary">
+                Découvrir le club
+            </Button>
         </div>
-    </section>
+    </Hero>
 
-    <section class="section">
-        <div class="container grid-3">
-            <div class="card">
-                <h3>Tous niveaux</h3>
-                <p>Enfants, adolescents et adultes.</p>
-            </div>
-            <div class="card">
-                <h3>Affilié France Judo</h3>
-                <p>Club officiel reconnu par la fédération.</p>
-            </div>
-            <div class="card">
-                <h3>Esprit sportif</h3>
-                <p>Respect, entraide et progression.</p>
-            </div>
+    <Section>
+        <div class="grid-3">
         </div>
-    </section>
+    </Section>
 
-    <section class="section section-alt">
-        <div class="container">
-            <h2>Horaires des cours</h2>
-            <p>Découvrez les créneaux adaptés à chaque âge.</p>
-            <a href="/cours-horaires" class="btn-primary">Voir tous les horaires</a>
-        </div>
-    </section>
+    <Section alt>
+        <h2>Horaires des cours</h2>
+        <p>Découvrez les créneaux adaptés à chaque âge et niveau.</p>
+        <Button href="/cours-horaires">
+            Voir tous les horaires
+        </Button>
+    </Section>
 
-    <section class="section">
-        <div class="container">
-            <h2>Actualités du club</h2>
-        </div>
-    </section>
+    <Section>
+        <h2>Actualités du club</h2>
+        <p>Suivez les dernières informations et résultats sportifs.</p>
+    </Section>
 
     <section class="cta">
         <div class="container">
             <h2>Rejoignez le CAPO Judo Limoges</h2>
-            <a href="/contact" class="btn-primary">Nous contacter</a>
+            <Button href="/contact">
+                Nous contacter
+            </Button>
         </div>
     </section>
 </MainLayout>

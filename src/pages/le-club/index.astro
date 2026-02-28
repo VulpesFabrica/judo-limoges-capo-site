@@ -1,46 +1,60 @@
 ---
 import MainLayout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+import Button from "../../components/Button.astro";
+import Section from "../../components/Section.astro";
+import Hero from "../../components/Hero.astro";
 ---
 
 <MainLayout title="Le Club – CAPO Judo Limoges">
-    <section class="hero small-hero">
-        <div class="hero-content">
-            <h1>Le CAPO Judo Limoges</h1>
-            <p>Un club engagé pour le développement du judo à Limoges.</p>
-        </div>
-    </section>
-    <section class="section">
-        <div class="container grid-2">
-            <div class="card">
+    <Hero
+        title="Le CAPO Judo Limoges"
+        subtitle="Un club engagé pour le développement du judo à Limoges depuis 1961."
+        small={true}
+    />
+    <Section>
+        <div class="grid-2">
+            <Card>
                 <h3>Historique</h3>
-                <p>Découvrez l’histoire du club et son évolution.</p>
-                <a href="/le-club/historique" class="btn-primary">Lire plus</a>
-            </div>
-            <div class="card">
+                <p>Découvrez l’histoire du club, ses fondateurs et les grandes étapes de son évolution.</p>
+                <Button href="/le-club/historique">Lire l’historique</Button>
+            </Card>
+            <Card>
                 <h3>Le Bureau</h3>
-                <p>Les membres qui font vivre le club.</p>
-                <a href="/le-club/le-bureau" class="btn-primary">Découvrir</a>
-            </div>
-            <div class="card">
+                <p>L’équipe administrative qui assure la gestion et le développement du club.</p>
+                <Button href="/le-club/le-bureau">Découvrir le bureau</Button>
+            </Card>
+            <Card>
                 <h3>Les Dojos</h3>
-                <p>Nos lieux d’entraînement à Limoges.</p>
-                <a href="/le-club/les-dojos" class="btn-primary">Voir les lieux</a>
-            </div>
-            <div class="card">
+                <p>Nos lieux d’entraînement à Limoges et les infrastructures à disposition.</p>
+                <Button href="/le-club/les-dojos">Voir les dojos</Button>
+            </Card>
+            <Card>
                 <h3>Les Enseignants</h3>
-                <p>Encadrement technique et pédagogique du club.</p>
-                <a href="/le-club/enseignants" class="btn-primary">Découvrir</a>
-            </div>
-            <div class="card">
+                <p>L’encadrement technique et pédagogique du CAPO Judo.</p>
+                <Button href="/le-club/enseignants">Voir les enseignants</Button>
+            </Card>
+            <Card>
                 <h3>Les Gradés</h3>
-                <p>Les ceintures noires et hauts gradés du club.</p>
-                <a href="/le-club/les-grades" class="btn-primary">Voir les gradés</a>
-            </div>
-            <div class="card">
+                <p>Les ceintures noires et hauts gradés qui font la richesse du club.</p>
+                <Button href="/le-club/les-grades">Voir les gradés</Button>
+            </Card>
+            <Card>
                 <h3>Compétitions</h3>
-                <p>Résultats et engagements sportifs.</p>
-                <a href="/le-club/competitions" class="btn-primary">Voir plus</a>
-            </div>
+                <p>Les compétitions à venir et les événements sportifs en cours.</p>
+                <Button href="/le-club/competitions">Voir les compétitions</Button>
+            </Card>
+            <Card>
+                <h3>Inscriptions</h3>
+                <p>Informations pratiques, documents à fournir et modalités d’inscription.</p>
+                <Button href="/le-club/inscription">S’inscrire</Button>
+            </Card>
+            <Card>
+                <h3>Résultats Sportifs</h3>
+                <p>Les performances et résultats des judokas du club.</p>
+                <Button href="/le-club/resultats-sportifs">Voir les résultats</Button>
+            </Card>
+
         </div>
-    </section>
+    </Section>
 </MainLayout>

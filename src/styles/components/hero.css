@@ -5,6 +5,35 @@
     text-align: center;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
 .small-hero {
     padding: 4rem 0;
+}
+
+.hero-address a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero-address a:hover {
+    text-decoration: underline;
+}
+
+.cta {
+    background: var(--color-primary);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 1.5rem;
 }

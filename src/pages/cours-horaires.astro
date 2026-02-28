@@ -1,3 +1,59 @@
 ---
-
+import MainLayout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
 ---
+
+<MainLayout title="Horaires des Cours – CAPO Judo Limoges">
+    <Hero
+        title="Horaires des Cours"
+        subtitle="Consultez les créneaux d’entraînement du CAPO Judo Limoges."
+        small={true}
+    />
+    <Section>
+        <div class="table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                <tr>
+                    <th>Catégorie</th>
+                    <th>Jour</th>
+                    <th>Horaire</th>
+                    <th>Lieu</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Baby Judo (4-6 ans)</td>
+                    <td>Mercredi</td>
+                    <td>14h00 - 15h00</td>
+                    <td>Dojo Locarno</td>
+                </tr>
+                <tr>
+                    <td>Poussins</td>
+                    <td>Mardi</td>
+                    <td>17h30 - 18h30</td>
+                    <td>Dojo Locarno</td>
+                </tr>
+                <tr>
+                    <td>Benjamins / Minimes</td>
+                    <td>Jeudi</td>
+                    <td>18h00 - 19h30</td>
+                    <td>Dojo Locarno</td>
+                </tr>
+                <tr>
+                    <td>Cadets / Juniors</td>
+                    <td>Lundi</td>
+                    <td>19h00 - 20h30</td>
+                    <td>Dojo Locarno</td>
+                </tr>
+                <tr>
+                    <td>Adultes</td>
+                    <td>Vendredi</td>
+                    <td>19h30 - 21h00</td>
+                    <td>Dojo Locarno</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </Section>
+</MainLayout>

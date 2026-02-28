@@ -1,32 +1,31 @@
-# Astro Starter Kit: Basics
+# CAPO Judo Limoges
 
-```sh
-npm create astro@latest -- --template basics
-```
+[![Astro](https://img.shields.io/badge/built%20with-Astro-FF5A5F?logo=astro&logoColor=white)](https://astro.build/)
+[![Netlify](https://img.shields.io/badge/deployed%20on-Netlify-00C7B7?logo=netlify&logoColor=white)](https://www.netlify.com/)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Welcome to the official website of **CAPO Judo Limoges**, a passionate club dedicated to the practice and promotion of judo in Limoges since 1961.
 
-## 🚀 Project Structure
+This site aims to:
 
-Inside of your Astro project, you'll see the following folders and files:
+- Present the **club**, its **history**, the **board members**, and the **instructors**.
+- Share **class schedules**, **competitions**, and **sporting results**.
+- Provide information about **membership**, **fees**, and **payment methods**.
+- Offer a **modern, clear, and responsive interface** for members and prospective judokas.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Built with **Astro** and deployed on **Netlify**, the site uses **reusable components** for easy maintenance and updates.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+You will also find practical information to **contact the club** or locate our **dojos in Limoges**.
+
+---
+
+## Quick Links
+
+- [Club Overview](./le-club)
+- [Class Schedules](./cours-horaires)
+- [Competitions](./competitions)
+- [Membership & Registration](./inscription)
+- [Contact](./contact)
 
 ## 🧞 Commands
 

@@ -1,3 +1,44 @@
 ---
-
+import MainLayout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Section from "../../components/Section.astro";
+import Card from "../../components/Card.astro";
 ---
+
+<MainLayout title="Compétitions – CAPO Judo Limoges">
+    <Hero
+        title="Les Compétitions"
+        subtitle="Suivez les événements sportifs du club."
+        small={true}
+    />
+    <Section>
+        <h2>Compétitions à venir</h2>
+        <div class="grid-2">
+            <Card>
+                <h3>Tournoi Départemental Minimes</h3>
+                <p><strong>Date :</strong> 12 octobre 2026</p>
+                <p><strong>Lieu :</strong> Limoges</p>
+                <p>Compétition officielle organisée par le comité départemental.</p>
+            </Card>
+            <Card>
+                <h3>Championnat Régional Cadets</h3>
+                <p><strong>Date :</strong> 8 novembre 2026</p>
+                <p><strong>Lieu :</strong> Nouvelle-Aquitaine</p>
+                <p>Sélection qualificative pour les championnats nationaux.</p>
+            </Card>
+        </div>
+    </Section>
+    <Section alt>
+        <h2>Compétitions en cours</h2>
+        <div class="grid-2">
+            <Card>
+                <h3>Challenge Interclubs</h3>
+                <p>Plusieurs judokas du CAPO participent actuellement aux phases de qualification.</p>
+            </Card>
+            <Card>
+                <h3>Tournoi National Juniors</h3>
+                <p>Suivez les résultats prochainement dans la section Actualités.</p>
+            </Card>
+        </div>
+    </Section>
+</MainLayout>

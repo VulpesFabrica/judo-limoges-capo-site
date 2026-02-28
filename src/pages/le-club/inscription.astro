@@ -1,0 +1,74 @@
+---
+import MainLayout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Section from "../../components/Section.astro";
+---
+
+<MainLayout title="Inscriptions – CAPO Judo Limoges">
+    <Hero
+        title="Inscriptions au CAPO Judo"
+        subtitle="Rejoignez notre club pour la saison en cours."
+        small={true}
+    />
+    <Section>
+        <h2>Documents à fournir</h2>
+        <ul class="doc-list">
+            <li>
+                <a href="/pdf/fiche-inscription.pdf" target="_blank">
+                    Fiche d'inscription
+                </a>
+            </li>
+            <li>
+                <a href="/pdf/certificat-medical.pdf" target="_blank">
+                    Certificat médical (apte à la pratique du JUDO y compris en compétition)
+                </a>
+            </li>
+            <li>
+                <a href="/pdf/reglement-club.pdf" target="_blank">
+                    Règlement du club signé
+                </a>
+            </li>
+        </ul>
+    </Section>
+
+    <Section alt>
+        <h2>Tarifs</h2>
+        <table class="tarif-table">
+            <thead>
+            <tr>
+                <th>Catégorie</th>
+                <th>Tarif annuel</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Enfants</td>
+                <td>150 €</td>
+            </tr>
+            <tr>
+                <td>Adolescents</td>
+                <td>180 €</td>
+            </tr>
+            <tr>
+                <td>Adultes</td>
+                <td>200 €</td>
+            </tr>
+            </tbody>
+        </table>
+    </Section>
+
+    <Section>
+        <h2>Moyens de paiement</h2>
+        <p>Le club est agréé / partenaire pour les dispositifs suivants :</p>
+        <ul class="payment-list">
+            <li>Tickets Loisirs CAF 87</li>
+            <li>Pass'sport</li>
+            <li>Shake@do.87</li>
+            <li>Pass'club</li>
+            <li>Chèques</li>
+            <li>Espèces</li>
+            <li>Paiement possible en plusieurs fois (septembre à avril)</li>
+            <li class="payment-required">Une demande de 60 € est demandée lors de l'inscription</li>
+        </ul>
+    </Section>
+</MainLayout>
