@@ -18,9 +18,22 @@ import Section from "../../components/Section.astro";
                     Fiche d'inscription
                 </a>
             </li>
+            <li class="doc-cert">
+                Lors de la première inscription, certificat médical portant la mention :
+                <em>« Apte à la pratique du judo, y compris en compétition »</em>.
+                <br />
+                <small>
+                    Valable 3 ans sous réserve que les questionnaires de santé soient remplis.
+                </small>
+            </li>
             <li>
-                <a href="/pdf/certificat-medical.pdf" target="_blank">
-                    Certificat médical (apte à la pratique du JUDO y compris en compétition)
+                <a href="/pdf/questionnaire-sante-mineur.pdf" target="_blank">
+                    Questionnaire de santé pour les mineurs
+                </a>
+            </li>
+            <li>
+                <a href="/pdf/attestation-questionnaire-sante-mineur.pdf" target="_blank">
+                    Attestation Questionnaire santé mineurs
                 </a>
             </li>
             <li>
@@ -32,29 +45,8 @@ import Section from "../../components/Section.astro";
     </Section>
 
     <Section alt>
-        <h2>Tarifs</h2>
-        <table class="tarif-table">
-            <thead>
-            <tr>
-                <th>Catégorie</th>
-                <th>Tarif annuel</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Enfants</td>
-                <td>150 €</td>
-            </tr>
-            <tr>
-                <td>Adolescents</td>
-                <td>180 €</td>
-            </tr>
-            <tr>
-                <td>Adultes</td>
-                <td>200 €</td>
-            </tr>
-            </tbody>
-        </table>
+        <h2>Tarifs - Saison {new Date().getFullYear()} - {new Date().getFullYear() + 1}</h2>
+        <img src="/public/images/tarifs.jpg" alt="Tarifs"/>
     </Section>
 
     <Section>

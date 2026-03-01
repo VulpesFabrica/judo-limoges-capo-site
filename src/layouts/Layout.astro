@@ -14,7 +14,9 @@ import "../styles/components/contact.css";
 import "../styles/components/bureau.css";
 import "../styles/components/inscription.css";
 import "../styles/components/cours.css";
-const { title } = Astro.props;
+import "../styles/components/code.css";
+
+const { title, pageClass = "" } = Astro.props;
 ---
 
 <html lang="fr">
@@ -24,11 +26,11 @@ const { title } = Astro.props;
 	<title>{title}</title>
 	<link rel="stylesheet" href="/styles/global.css">
 </head>
-<body>
-<Header />
-<main>
-	<slot />
-</main>
-<Footer />
+<body class={`site ${pageClass}`}>
+	<Header />
+	<main class="site-main">
+		<slot />
+	</main>
+	<Footer />
 </body>
 </html>

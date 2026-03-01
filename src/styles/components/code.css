@@ -1,0 +1,18 @@
+.code-moral {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.moral-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.moral-list li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--color-bg-soft);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 8px;
+}

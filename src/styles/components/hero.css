@@ -26,14 +26,3 @@
 .hero-address a:hover {
     text-decoration: underline;
 }
-
-.cta {
-    background: var(--color-primary);
-    color: white;
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.cta h2 {
-    margin-bottom: 1.5rem;
-}

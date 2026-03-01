@@ -1,11 +1,9 @@
 ---
 import MainLayout from "../layouts/Layout.astro";
-import Section from "../components/Section.astro";
-import Button from "../components/Button.astro";
 import Hero from "../components/Hero.astro";
 ---
 
-<MainLayout title="CAPO Judo Limoges – Club de Judo à Limoges">
+<MainLayout title="CAPO Judo Limoges – Club de Judo à Limoges" pageClass="home-page">
     <Hero
         title="CAPO Judo Limoges"
     >
@@ -25,38 +23,5 @@ import Hero from "../components/Hero.astro";
             alt="Label Bronze France Judo"
             class="logo-lg"
         />
-        <div class="hero-buttons">
-            <Button href="/cours-horaires">Voir les horaires</Button>
-            <Button href="/le-club" variant="secondary">
-                Découvrir le club
-            </Button>
-        </div>
     </Hero>
-
-    <Section>
-        <div class="grid-3">
-        </div>
-    </Section>
-
-    <Section alt>
-        <h2>Horaires des cours</h2>
-        <p>Découvrez les créneaux adaptés à chaque âge et niveau.</p>
-        <Button href="/cours-horaires">
-            Voir tous les horaires
-        </Button>
-    </Section>
-
-    <Section>
-        <h2>Actualités du club</h2>
-        <p>Suivez les dernières informations et résultats sportifs.</p>
-    </Section>
-
-    <section class="cta">
-        <div class="container">
-            <h2>Rejoignez le CAPO Judo Limoges</h2>
-            <Button href="/contact">
-                Nous contacter
-            </Button>
-        </div>
-    </section>
 </MainLayout>

@@ -22,9 +22,33 @@ body {
     margin: 0;
     font-family: system-ui, sans-serif;
     color: var(--color-text);
+    min-height: 100%;
+    line-height: 1.6;
 }
 
 img {
     max-width: 100%;
     display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-main {
+    flex: 1;
+}
+
+.home-page main {
+    background: var(--color-primary);
 }
