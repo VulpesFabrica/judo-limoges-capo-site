@@ -1,0 +1,36 @@
+---
+import MainLayout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Section from "../../components/Section.astro";
+---
+<MainLayout title="Espace club">
+    <Hero
+            title="Espace interne du club"
+            subtitle="Documents réservés aux responsables"
+            small={true}
+    />
+    <Section>
+        <h2>Documents</h2>
+        <ul>
+
+            <li>
+                <a href="https://docs.google.com/spreadsheets/XXXX" target="_blank">
+                    Tableau inscriptions
+                </a>
+            </li>
+
+            <li>
+                <a href="https://docs.google.com/spreadsheets/YYYY" target="_blank">
+                    Suivi compétitions
+                </a>
+            </li>
+
+            <li>
+                <a href="https://drive.google.com/XXXXX" target="_blank">
+                    Documents administratifs
+                </a>
+            </li>
+
+        </ul>
+    </Section>
+</MainLayout>
