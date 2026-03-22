@@ -11,23 +11,15 @@ import Section from "../components/Section.astro";
             small={true}
     />
     <Section>
-        <button id="login-btn">Se connecter</button>
+        <button onclick="window.netlifyIdentity.open()">
+            Se connecter
+        </button>
         <script>
-            declare global {
-                interface Window {
-                    netlifyIdentity: any;
-                }
-            }
-        </script>
-        <script is:inline>
             document.addEventListener("DOMContentLoaded", () => {
-                const identity = window.netlifyIdentity;
-                const btn = document.getElementById("login-btn");
-                if (identity && btn) {
-                    btn.addEventListener("click", () => {
-                        identity.open();
-                    });
-                    identity.on("login", () => {
+                if (window.netlifyIdentity) {
+                    window.netlifyIdentity.init();
+
+                    window.netlifyIdentity.on("login", () => {
                         window.location.href = "/espace-club-private/";
                     });
                 } else {
