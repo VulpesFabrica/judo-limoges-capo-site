@@ -1,0 +1,39 @@
+---
+import MainLayout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+---
+
+<MainLayout title="Accès réservé">
+    <Hero
+            title="Espace réservé"
+            subtitle="Connexion requise pour accéder aux documents du club"
+            small={true}
+    />
+    <Section>
+        <button id="login-btn">Se connecter</button>
+        <script>
+            declare global {
+                interface Window {
+                    netlifyIdentity: any;
+                }
+            }
+        </script>
+        <script is:inline>
+            document.addEventListener("DOMContentLoaded", () => {
+                const identity = window.netlifyIdentity;
+                const btn = document.getElementById("login-btn");
+                if (identity && btn) {
+                    btn.addEventListener("click", () => {
+                        identity.open();
+                    });
+                    identity.on("login", () => {
+                        window.location.href = "/espace-club-private/";
+                    });
+                } else {
+                    console.error("Netlify Identity non chargé");
+                }
+            });
+        </script>
+    </Section>
+</MainLayout>

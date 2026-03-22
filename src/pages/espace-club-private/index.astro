@@ -14,7 +14,6 @@ import Section from "../../components/Section.astro";
     <Section>
         <h2>Documents</h2>
         <ul>
-
             <li>
                 <a href="https://docs.google.com/spreadsheets/XXXX" target="_blank">
                     Tableau inscriptions
@@ -32,7 +31,9 @@ import Section from "../../components/Section.astro";
                     Documents administratifs
                 </a>
             </li>
-
         </ul>
+        <button onclick="netlifyIdentity.logout()">
+            Se déconnecter
+        </button>
     </Section>
 </MainLayout>
