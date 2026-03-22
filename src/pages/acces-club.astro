@@ -11,21 +11,48 @@ import Section from "../components/Section.astro";
             small={true}
     />
     <Section>
-        <button onclick="window.netlifyIdentity.open()">
-            Se connecter
-        </button>
+        <button id="login">Connexion</button>
         <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                if (window.netlifyIdentity) {
-                    window.netlifyIdentity.init();
-
-                    window.netlifyIdentity.on("login", () => {
-                        window.location.href = "/espace-club-private/";
-                    });
+            const API = "/.netlify/identity";
+            document.getElementById("login").addEventListener("click", async () => {
+                const email = prompt("Email");
+                const password = prompt("Mot de passe");
+                const res = await fetch(API + "/token", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        grant_type: "password",
+                        username: email,
+                        password: password
+                    })
+                });
+                const data = await res.json();
+                if (data.access_token) {
+                    localStorage.setItem("token", data.access_token);
+                    window.location.href = "/espace-club-private/";
                 } else {
-                    console.error("Netlify Identity non chargé");
+                    alert("Erreur login");
                 }
             });
         </script>
+
+        <!--<button onclick="window.netlifyIdentity.open()">-->
+        <!--    Se connecter-->
+        <!--</button>-->
+        <!--<script>-->
+        <!--    document.addEventListener("DOMContentLoaded", () => {-->
+        <!--        if (window.netlifyIdentity) {-->
+        <!--            window.netlifyIdentity.init();-->
+
+        <!--            window.netlifyIdentity.on("login", () => {-->
+        <!--                window.location.href = "/espace-club-private/";-->
+        <!--            });-->
+        <!--        } else {-->
+        <!--            console.error("Netlify Identity non chargé");-->
+        <!--        }-->
+        <!--    });-->
+        <!--</script>-->
     </Section>
 </MainLayout>

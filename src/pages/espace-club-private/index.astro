@@ -4,7 +4,12 @@ import Hero from "../../components/Hero.astro";
 import Section from "../../components/Section.astro";
 ---
 <meta name="robots" content="noindex, nofollow">
-
+<script>
+    const token = localStorage.getItem("token");
+    if (!token) {
+        window.location.href = "/acces-club";
+    }
+</script>
 <MainLayout title="Espace club">
     <Hero
             title="Espace interne du club"
