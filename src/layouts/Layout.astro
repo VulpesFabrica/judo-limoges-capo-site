@@ -36,4 +36,10 @@ const { title, pageClass = "" } = Astro.props;
 </body>
 </html>
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script type="module">
+	import netlifyIdentity from "@netlify/identity";
+	const identity = netlifyIdentity.init({
+		APIUrl: "https://judo-limoges-capo.netlify.app/.netlify/identity"
+	});
+	identity.handleLoginRedirect();
+</script>

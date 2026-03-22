@@ -4,11 +4,25 @@ import Hero from "../../components/Hero.astro";
 import Section from "../../components/Section.astro";
 ---
 <meta name="robots" content="noindex, nofollow">
-<script>
-    const token = localStorage.getItem("token");
-    if (!token) {
+<script type="module">
+    import identity from "../../scripts/indentity.js";
+
+    const user = identity.currentUser();
+
+    if (!user) {
         window.location.href = "/acces-club";
     }
+
+    const roles = user?.app_metadata?.roles || [];
+
+    if (!roles.includes("admin")) {
+        window.location.href = "/";
+    }
+
+    document.getElementById("logout")?.addEventListener("click", () => {
+        identity.logout();
+        window.location.href = "/";
+    });
 </script>
 <MainLayout title="Espace club">
     <Hero
@@ -37,7 +51,7 @@ import Section from "../../components/Section.astro";
                 </a>
             </li>
         </ul>
-        <button onclick="netlifyIdentity.logout()">
+        <button id="logout">
             Se déconnecter
         </button>
     </Section>
