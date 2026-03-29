@@ -16,6 +16,8 @@ import "../styles/components/inscription.css";
 import "../styles/components/cours.css";
 import "../styles/components/code.css";
 import "../styles/components/competitions.css";
+import "../styles/components/actualite.css";
+import "../styles/components/article.css";
 
 const { title, pageClass = "" } = Astro.props;
 ---
@@ -25,7 +27,6 @@ const { title, pageClass = "" } = Astro.props;
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
 	<title>{title}</title>
-	<link rel="stylesheet" href="/styles/global.css">
 </head>
 <body class={`site ${pageClass}`}>
 	<Header />
@@ -35,11 +36,3 @@ const { title, pageClass = "" } = Astro.props;
 	<Footer />
 </body>
 </html>
-
-<script type="module">
-	import netlifyIdentity from "@netlify/identity";
-	const identity = netlifyIdentity.init({
-		APIUrl: "https://judo-limoges-capo.netlify.app/.netlify/identity"
-	});
-	identity.handleLoginRedirect();
-</script>

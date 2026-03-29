@@ -52,7 +52,24 @@
 }
 
 @media (max-width: 900px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
     .nav {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav a {
+        font-size: 1.1rem;
+    }
+
+    .header-cta {
+        margin-top: 1rem;
     }
 }

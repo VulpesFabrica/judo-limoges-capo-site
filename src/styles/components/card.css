@@ -10,3 +10,16 @@
     transform: translateY(-6px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.card-footer .date {
+    font-weight: bold;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}

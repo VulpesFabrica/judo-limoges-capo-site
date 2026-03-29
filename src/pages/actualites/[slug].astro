@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Section from "../../components/Section.astro";
+import {formatDateFR} from "../../utils/date";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("actualites");
+    return posts.map(post => ({
+        params: { slug: post.slug },
+        props: { post }
+    }));
+}
+const { post } = Astro.props;
+---
+
+<MainLayout title={post.data.title}>
+    <Hero
+        title={post.data.title}
+        subtitle={formatDateFR(post.data.date)}
+        small={true}
+    />
+    <Section>
+        <div class="article-wrapper">
+            <article class="article-content">
+                <Fragment set:html={post.body} />
+            </article>
+            <a href="/actualites" class="btn-primary back-btn">
+                ← Retour aux actualités
+            </a>
+        </div>
+    </Section>
+</MainLayout>

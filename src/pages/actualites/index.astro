@@ -1,3 +1,74 @@
 ---
+import MainLayout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Section from "../../components/Section.astro";
+import Card from "../../components/Card.astro";
+import { formatDateFR } from "../../utils/date";
 
+import { getCollection } from "astro:content";
+const posts = await getCollection("actualites");
 ---
+
+<MainLayout title="Actualités – CAPO Judo Limoges">
+    <Hero
+        title="Actualités du club"
+        subtitle="Suivez la vie du CAPO Judo Limoges"
+        small={true}
+    />
+    <Section>
+        <div class="actualites-header">
+            <h2>Les dernières informations</h2>
+            <p>
+                Retrouvez ici les événements, résultats et moments forts du club.
+            </p>
+        </div>
+        {posts.length === 0 ? (
+            <div class="empty-state">
+                <h3>Aucune actualité pour le moment</h3>
+                <p>
+                    Les actualités du club seront publiées prochainement.
+                    N’hésitez pas à revenir régulièrement pour suivre nos activités.
+                </p>
+                <a href="/contact" class="btn-primary">
+                    Nous contacter
+                </a>
+            </div>
+        ) : (
+            <div class="grid-2">
+                {posts.map(post => (
+                    <Card>
+                        <div class="card-content">
+                            <h3>{post.data.title}</h3>
+                            <p>{post.data.excerpt}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="date">
+                                {formatDateFR(post.data.date)}
+                            </small>
+                            <a href={`/actualites/${post.slug}`} class="btn-primary">
+                                Lire l'article
+                            </a>
+                        </div>
+                    </Card>
+                ))}
+            </div>
+        )}
+    </Section>
+    <Section alt>
+        <h2>Ce que vous trouverez ici</h2>
+        <div class="grid-3">
+            <Card>
+                <h3>Compétitions</h3>
+                <p>Résultats et participations des judokas du club.</p>
+            </Card>
+            <Card>
+                <h3>Événements</h3>
+                <p>Stages, animations et moments de vie du club.</p>
+            </Card>
+            <Card>
+                <h3>Annonces</h3>
+                <p>Informations importantes pour les adhérents.</p>
+            </Card>
+        </div>
+    </Section>
+</MainLayout>
