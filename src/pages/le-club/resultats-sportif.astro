@@ -1,3 +1,31 @@
 ---
-
+import Hero from "../../components/Hero.astro";
+import Section from "../../components/Section.astro";
+import MainLayout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
 ---
+
+<MainLayout title="Résultats sportifs – CAPO Judo Limoges">
+    <Hero
+        title="Résultats sportifs"
+        subtitle="Les performances des judokas du CAPO Judo Limoges."
+        small={true}
+    />
+
+    <Section>
+        <div class="grid-2">
+            <Card>
+                <h3>Tournoi de Saint-Léonard</h3>
+                <p>
+                    <strong>Résultat :</strong><br />
+                    2ème – Jules ROUSSEAU (Poussin)
+                </p>
+                <img
+                    src="/images/resultats/tournoi-st-leonard-poussin.jpg"
+                    alt="Tournoi de Saint-Léonard – Jules Rousseau"
+                    class="result-img"
+                />
+            </Card>
+        </div>
+    </Section>
+</MainLayout>
