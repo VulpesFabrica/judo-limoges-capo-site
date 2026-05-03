@@ -1,6 +1,7 @@
 ---
+const { variant = "default" } = Astro.props;
 ---
 
-<div class="card">
+<div class={`card ${variant}`}>
     <slot />
 </div>
