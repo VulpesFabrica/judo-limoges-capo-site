@@ -1,14 +1,14 @@
 ---
-import { getCollection } from "astro:content";
+import {type CollectionEntry, getCollection} from "astro:content";
 import MainLayout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
 import Section from "../../components/Section.astro";
 import {formatDateFR} from "../../utils/date";
 
 export async function getStaticPaths() {
-    const posts = await getCollection("actualites");
+    const posts: CollectionEntry<"actualites">[] = await getCollection("actualites");
     return posts.map(post => ({
-        params: { slug: post.slug },
+        params: { slug: post.data },
         props: { post }
     }));
 }
